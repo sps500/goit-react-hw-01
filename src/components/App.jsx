@@ -1,7 +1,9 @@
 import Profile from "./Profile/Profile";
 import userData from "../userData.json";
 import FriendList from "./FriendList/FriendList";
-import friendsData from "../friends.json"; // Змінено назву змінної на friendsData
+import friendsData from "../friends.json";
+import transactions from "../transactions.json";
+import TransactionHistory from "./TransactionHistory/TransactionHistory";
 
 export default function App() {
   const { username, tag, location, avatar, stats } = userData;
@@ -18,6 +20,7 @@ export default function App() {
         />
         <>
           <FriendList friends={friendsData} />
+          <TransactionHistory transactions={transactions} />
         </>
       </div>
     </>
